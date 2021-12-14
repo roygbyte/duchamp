@@ -1,0 +1,82 @@
+<div class="row">
+  <div class="col-sm-12">
+    <div class="knob-box">
+      <knob knob-data="$ctrl.knobs.frameRate.value" knob-options="$ctrl.knobs.frameRate.options"></knob>
+      <h2>Frame Rate</h2>
+    </div>
+    <div class="knob-box">
+      <knob knob-data="$ctrl.knobs.brightness.value" knob-options="$ctrl.knobs.brightness.options"></knob>
+      <h2>Brightness</h2>
+    </div>
+    <div class="knob-box">
+      <knob knob-data="$ctrl.knobs.effectA.value" knob-options="$ctrl.knobs.effectA.options"></knob>
+      <h2>Effect A</h2>
+    </div>
+    <div class="knob-box">
+      <knob knob-data="$ctrl.knobs.effectB.value" knob-options="$ctrl.knobs.effectB.options"></knob>
+      <h2>Effect B</h2>
+    </div>
+    <div class="knob-box">
+      <knob knob-data="$ctrl.knobs.speed.value" knob-options="$ctrl.knobs.speed.options"></knob>
+      <h2>Speed</h2>
+    </div>
+    <div class="knob-box">
+      <h2>{{$ctrl.animation.activeAnimation}}</h2>
+    </div>
+    <div class="knob-box">
+      <input type="text" class="picker-primary">
+      <br/>
+      <h2>Primary</h2>
+    </div>
+    <div class="knob-box">
+      <input type="text" class="picker-secondary">
+      <br/>
+      <h2>Secondary</h2>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="row">
+  <div class="col-sm-12">
+    <div class="led-strip">
+      <div class="led-item-inner" ng-repeat="led in $ctrl.leds" ng-click="$ctrl.selectLed($index)"> 
+        <div class="led-item-outter led-icon" style="background:rgb({{led.value.r}},{{led.value.g}},{{led.value.b}})">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--<input type="submit" value="+" ng-click="$ctrl.increaseLedCount()">
+<input type="submit" value="-" ng-click="$ctrl.decreaseLedCount()">-->
+
+<div class="row buttons">
+  <div class="col-sm-12">
+    <div class="btn btn-primary" ng-click="$ctrl.animation.activate('FADEOUT')">FadeOut</div>
+    <div class="btn btn-primary" ng-click="$ctrl.animation.activate('IMAGE')">Image</div>
+    <div class="btn btn-primary" ng-click="$ctrl.animation.activate('HSV_CYCLE')">HSV Cycle</div>
+    <div class="btn btn-primary" ng-click="$ctrl.animation.activate('NONE')">Pause</div>
+    <div class="btn btn-primary" ng-click="$ctrl.animation.activate('STROBE')">Strobe</div>
+    <div class="btn btn-primary" ng-click="$ctrl.animation.activate('CHASE')">Chase</div>
+    <div class="btn btn-primary" ng-click="$ctrl.animation.activate('FADE_BETWEEN')">FADE BETWEEN</div>
+
+  </div>
+</div>
+
+<!--<input ng-model="$ctrl.options.speed" ng-change="$ctrl.setOption('speed',$ctrl.options.speed)" type="range" min="0" max="10" step="1" >-->
+
+<div class="row">
+  <div class="col-sm-12">
+    <ghost-frame frame="frame" ng-repeat="frame in $ctrl.frames"></ghost-frame>  
+  </div>
+</div>
+ 
+<div class="row">
+  <div class="col-sm-12 relay-strip">
+    <div class="relay-item" ng-repeat="relay in $ctrl.relays" ng-click="$ctrl.toggleRelay($index)">
+      {{relay.value.on}}
+    </div>
+  </div>
+</div>

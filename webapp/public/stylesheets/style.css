@@ -1,0 +1,84 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background:#333;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.btn {
+  border-radius: 0;
+  border:1px solid #ccc;
+  background:none;
+  color:#ccc;
+  margin-right: 5px;
+  font-family: monospace;
+  padding:100px 20px;
+}
+.btn:hover {
+  border-color: salmon;
+  color:salmon;
+  background: none;
+}
+
+.buttons {
+  margin: 0 -5px;
+}
+
+.led-strip {
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 20px;
+  border:1px solid #ccc;
+  padding:10px;
+  margin: 10px;
+}
+
+.led-item-outter {
+  padding:3px;
+  flex-grow: 1;
+  height:15px;
+  border-radius: 1000px;
+  border-right:2px solid black;
+}
+
+.led-item-inner {
+  width:100%;
+}
+
+
+.ghost-frame {
+  border:1px solid #ccc;
+  padding:10px;
+  display: inline-block;
+  margin:10px;
+}
+
+.knob-box {
+  vertical-align: top;
+  margin:0 10px;
+  display: inline-block;
+  border:1px solid #ccc;
+  padding:10px;
+} 
+
+.knob-box h2 {
+  opacity: .7;
+  color:white;
+  font-family: monospace;
+  font-size: 14px;
+  text-align: center;
+  margin-top: 15px;
+}
+
+.relay-strip {
+
+}
+
+.relay-item {
+  width:20px;
+  height:20px;
+  color:white;
+}

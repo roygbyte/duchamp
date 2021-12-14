@@ -1,0 +1,14 @@
+<div class="col-sm-12 ghost-frame">
+  <canvas id="canvas" width="400" height="400" ng-click="$ctrl.getPixelAt(0,0)"></canvas>
+  <div class="knob-box">
+    <knob knob-data="$ctrl.knobs.brushSize.value" knob-options="$ctrl.knobs.brushSize.options" on-change="$ctrl.updateOptions(size)"></knob>
+    <h2>Brush Size</h2>
+  </div>
+  <div class="knob-box">
+    <input type="text" class="color-picker">
+  </div>
+  <!--<form ng-submit="addData()">
+    <input ng-model="amount"  size="3" placeholder="Amount" required type="number" min="5" max="100">
+    <input class="btn-primary" type="submit" value="Add point">
+  </form> -->
+</div>

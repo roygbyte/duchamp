@@ -1,0 +1,27 @@
+{
+  "name": "duchamp",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "angular-knob": "^0.0.4",
+    "body-parser": "~1.18.2",
+    "color-convert": "^1.9.1",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.9",
+    "dgram": "*",
+    "ejs": "^2.5.7",
+    "express": "~4.15.5",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-livereload": "^3.8.1",
+    "gulp-nodemon": "^2.2.1",
+    "jade": "~1.11.0",
+    "jquery": "^3.2.1",
+    "morgan": "~1.9.0",
+    "serve-favicon": "~2.4.5",
+    "socket.io": "^2.0.4"
+  }
+}
